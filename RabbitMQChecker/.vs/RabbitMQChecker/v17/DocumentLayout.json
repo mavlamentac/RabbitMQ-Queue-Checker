@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\users\\controller\\source\\repos\\rabbitmqchecker\\rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\users\\controller\\source\\repos\\rabbitmqchecker\\rabbitmqchecker\\mainfrm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\mainfrm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\users\\controller\\source\\repos\\rabbitmqchecker\\rabbitmqchecker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\users\\controller\\source\\repos\\rabbitmqchecker\\rabbitmqchecker\\rabbitmqchecker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\rabbitmqchecker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\users\\controller\\source\\repos\\rabbitmqchecker\\rabbitmqchecker\\rabbitmqchecker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\rabbitmqchecker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainFrm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\MainFrm.Designer.cs",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.Designer.cs",
+              "ToolTip": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\MainFrm.Designer.cs",
+              "RelativeToolTip": "RabbitMQChecker\\MainFrm.Designer.cs",
+              "ViewState": "AgIAAMgAAAAAAAAAAAASwNsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:27:06.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RabbitMQChecker.csproj",
+              "DocumentMoniker": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\RabbitMQChecker.csproj",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\RabbitMQChecker.csproj",
+              "ToolTip": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\RabbitMQChecker.csproj",
+              "RelativeToolTip": "RabbitMQChecker\\RabbitMQChecker.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-13T09:34:22.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RabbitMQChecker",
+              "DocumentMoniker": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\RabbitMQChecker.csproj",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\RabbitMQChecker.csproj",
+              "ToolTip": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\RabbitMQChecker.csproj",
+              "RelativeToolTip": "RabbitMQChecker\\RabbitMQChecker.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-13T10:02:13.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\Program.cs",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\Program.cs",
+              "ToolTip": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\Program.cs",
+              "RelativeToolTip": "RabbitMQChecker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:27:22.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainFrm.cs",
+              "DocumentMoniker": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\MainFrm.cs",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.cs",
+              "ToolTip": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\MainFrm.cs",
+              "RelativeToolTip": "RabbitMQChecker\\MainFrm.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwv2EAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:27:26.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainFrm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\MainFrm.cs",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.cs",
+              "ToolTip": "C:\\Users\\controller\\source\\repos\\RabbitMQChecker\\RabbitMQChecker\\MainFrm.cs [Design]",
+              "RelativeToolTip": "RabbitMQChecker\\MainFrm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:27:04.399Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
