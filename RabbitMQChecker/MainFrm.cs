@@ -83,6 +83,7 @@ namespace RabbitMQChecker
 
             StartBtn.Enabled = true;
             StopBtn.Enabled = false;
+            ClearBtn.Enabled = true;
         }
 
         private void StartBtn_Click(object sender, EventArgs e)
@@ -93,6 +94,8 @@ namespace RabbitMQChecker
                 StartConsumer();
                 StartBtn.Enabled = false;
                 StopBtn.Enabled = true;
+                ClearBtn.Enabled = false;
+                StopBtn.Focus();
                 EmptyMessagesTimer.Enabled = true;
             }
         }
@@ -107,13 +110,14 @@ namespace RabbitMQChecker
                 LogMessages(Environment.NewLine + "Message consumption has finished. Please check the processed data or logs for details.");
                 StartBtn.Enabled = true;
                 StopBtn.Enabled = false;
+                ClearBtn.Enabled = true;
                 if (IsAborting == false)
                 {
                     CloseConnection();
                 }
 
             }
-            else 
+            else
             {
                 PrevLine = CurrLine;
             }
@@ -127,6 +131,7 @@ namespace RabbitMQChecker
                 LogMessages("No available messages to process");
                 StartBtn.Enabled = true;
                 StopBtn.Enabled = false;
+                ClearBtn.Enabled = true;
                 if (IsAborting == false)
                 {
                     CloseConnection();
@@ -148,10 +153,10 @@ namespace RabbitMQChecker
         public void CloseConnection()
         {
             if (_channel != null)
-            _channel.Close();
+                _channel.Close();
 
             if (_connection != null)
-            _connection.Close();
+                _connection.Close();
         }
 
         public bool FieldsValidation()
@@ -165,19 +170,19 @@ namespace RabbitMQChecker
                 MessageBox.Show("Error: End point cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (string.IsNullOrEmpty(PortTxt.Text))
-            {  
-               IsEmpty = true;
-               PortTxt.Focus();
-               MessageBox.Show("Error: Port cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                IsEmpty = true;
+                PortTxt.Focus();
+                MessageBox.Show("Error: Port cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (string.IsNullOrEmpty(UsernameTxt.Text))
             {
                 IsEmpty = true;
                 UsernameTxt.Focus();
                 MessageBox.Show("Error: Username cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }   
+            }
             else if (string.IsNullOrEmpty(PasswordTxt.Text))
-            { 
+            {
                 IsEmpty = true;
                 PasswordTxt.Focus();
                 MessageBox.Show("Error: Password cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -187,15 +192,38 @@ namespace RabbitMQChecker
                 IsEmpty = true;
                 VirtualHostTxt.Focus();
                 MessageBox.Show("Error: Virtual host cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
+            }
             else if (string.IsNullOrEmpty(QueueTxt.Text))
             {
                 IsEmpty = true;
                 QueueTxt.Focus();
                 MessageBox.Show("Error: Queue cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                
+
             return IsEmpty;
+        }
+
+        private void SelectionBtn_Click(object sender, EventArgs e)
+        {
+            EndPointSelectionFrm modalForm = new EndPointSelectionFrm();
+            DialogResult result = modalForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                EndPointTxt.Text = modalForm.SelectedEndPoint;
+                PortTxt.Text = modalForm.SelectedPort;
+                VirtualHostTxt.Text = modalForm.SelectedVirtualHost;
+            }
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            EndPointTxt.Clear();
+            PortTxt.Clear();
+            VirtualHostTxt.Clear();
+            QueueTxt.Clear();
+            VirtualHostTxt.Clear();
+            LogsTxt.Clear();
         }
     }
 }

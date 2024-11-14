@@ -48,36 +48,38 @@
             StopBtn = new Button();
             timer2 = new System.Windows.Forms.Timer(components);
             ConsumingMessageTimer = new System.Windows.Forms.Timer(components);
+            SelectionBtn = new Button();
+            ClearBtn = new Button();
             SuspendLayout();
             // 
             // EndPointTxt
             // 
             EndPointTxt.Location = new Point(96, 12);
             EndPointTxt.Name = "EndPointTxt";
-            EndPointTxt.Size = new Size(294, 23);
+            EndPointTxt.Size = new Size(403, 23);
             EndPointTxt.TabIndex = 0;
             // 
             // UsernameTxt
             // 
-            UsernameTxt.Location = new Point(96, 41);
+            UsernameTxt.Location = new Point(96, 70);
             UsernameTxt.Name = "UsernameTxt";
             UsernameTxt.Size = new Size(438, 23);
-            UsernameTxt.TabIndex = 2;
+            UsernameTxt.TabIndex = 3;
             // 
             // PasswordTxt
             // 
-            PasswordTxt.Location = new Point(96, 70);
+            PasswordTxt.Location = new Point(96, 99);
             PasswordTxt.Name = "PasswordTxt";
             PasswordTxt.Size = new Size(438, 23);
-            PasswordTxt.TabIndex = 3;
+            PasswordTxt.TabIndex = 4;
             PasswordTxt.UseSystemPasswordChar = true;
             // 
             // VirtualHostTxt
             // 
-            VirtualHostTxt.Location = new Point(96, 99);
+            VirtualHostTxt.Location = new Point(96, 41);
             VirtualHostTxt.Name = "VirtualHostTxt";
-            VirtualHostTxt.Size = new Size(438, 23);
-            VirtualHostTxt.TabIndex = 4;
+            VirtualHostTxt.Size = new Size(288, 23);
+            VirtualHostTxt.TabIndex = 1;
             // 
             // QueueTxt
             // 
@@ -98,7 +100,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 44);
+            label2.Location = new Point(12, 73);
             label2.Name = "label2";
             label2.Size = new Size(63, 15);
             label2.TabIndex = 6;
@@ -107,7 +109,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 73);
+            label3.Location = new Point(12, 102);
             label3.Name = "label3";
             label3.Size = new Size(60, 15);
             label3.TabIndex = 7;
@@ -116,7 +118,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 102);
+            label4.Location = new Point(12, 44);
             label4.Name = "label4";
             label4.Size = new Size(72, 15);
             label4.TabIndex = 8;
@@ -133,9 +135,9 @@
             // 
             // StartBtn
             // 
-            StartBtn.Location = new Point(296, 157);
+            StartBtn.Location = new Point(328, 157);
             StartBtn.Name = "StartBtn";
-            StartBtn.Size = new Size(116, 32);
+            StartBtn.Size = new Size(100, 32);
             StartBtn.TabIndex = 6;
             StartBtn.Text = "Start Consume";
             StartBtn.UseVisualStyleBackColor = true;
@@ -144,7 +146,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(405, 15);
+            label6.Location = new Point(398, 44);
             label6.Name = "label6";
             label6.Size = new Size(32, 15);
             label6.TabIndex = 14;
@@ -152,10 +154,10 @@
             // 
             // PortTxt
             // 
-            PortTxt.Location = new Point(443, 12);
+            PortTxt.Location = new Point(443, 41);
             PortTxt.Name = "PortTxt";
             PortTxt.Size = new Size(91, 23);
-            PortTxt.TabIndex = 1;
+            PortTxt.TabIndex = 2;
             // 
             // EmptyMessagesTimer
             // 
@@ -175,10 +177,11 @@
             // StopBtn
             // 
             StopBtn.Enabled = false;
-            StopBtn.Location = new Point(418, 157);
+            StopBtn.Location = new Point(434, 157);
             StopBtn.Name = "StopBtn";
-            StopBtn.Size = new Size(116, 32);
+            StopBtn.Size = new Size(100, 32);
             StopBtn.TabIndex = 15;
+            StopBtn.TabStop = false;
             StopBtn.Text = "Stop Consume";
             StopBtn.UseVisualStyleBackColor = true;
             StopBtn.Click += StopBtn_Click;
@@ -192,11 +195,34 @@
             ConsumingMessageTimer.Interval = 2000;
             ConsumingMessageTimer.Tick += ConsumingMessageTimer_Tick;
             // 
+            // SelectionBtn
+            // 
+            SelectionBtn.Location = new Point(505, 12);
+            SelectionBtn.Name = "SelectionBtn";
+            SelectionBtn.Size = new Size(29, 23);
+            SelectionBtn.TabIndex = 16;
+            SelectionBtn.TabStop = false;
+            SelectionBtn.Text = "...";
+            SelectionBtn.UseVisualStyleBackColor = true;
+            SelectionBtn.Click += SelectionBtn_Click;
+            // 
+            // ClearBtn
+            // 
+            ClearBtn.Location = new Point(12, 157);
+            ClearBtn.Name = "ClearBtn";
+            ClearBtn.Size = new Size(100, 32);
+            ClearBtn.TabIndex = 17;
+            ClearBtn.Text = "Clear all";
+            ClearBtn.UseVisualStyleBackColor = true;
+            ClearBtn.Click += ClearBtn_Click;
+            // 
             // MainFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(546, 450);
+            Controls.Add(ClearBtn);
+            Controls.Add(SelectionBtn);
             Controls.Add(StopBtn);
             Controls.Add(label6);
             Controls.Add(PortTxt);
@@ -242,5 +268,7 @@
         private Button StopBtn;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer ConsumingMessageTimer;
+        private Button SelectionBtn;
+        private Button ClearBtn;
     }
 }
