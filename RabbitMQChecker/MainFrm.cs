@@ -75,6 +75,7 @@ namespace RabbitMQChecker
             catch (Exception ex)
             {
                 LogMessages($"Error: {ex.Message}");
+                IsAborting = true;
             }
 
         }
@@ -96,11 +97,18 @@ namespace RabbitMQChecker
             if (FieldsValidation() != true)
             {
                 StartConsumer();
-                StartBtn.Enabled = false;
-                StopBtn.Enabled = true;
-                ClearBtn.Enabled = false;
-                StopBtn.Focus();
-                EmptyMessagesTimer.Enabled = true;
+                if (IsAborting == true)
+                {
+                    CloseConnection();
+                }
+                else
+                {
+                    StartBtn.Enabled = false;
+                    StopBtn.Enabled = true;
+                    ClearBtn.Enabled = false;
+                    StopBtn.Focus();
+                    EmptyMessagesTimer.Enabled = true;
+                }
             }
         }
 
