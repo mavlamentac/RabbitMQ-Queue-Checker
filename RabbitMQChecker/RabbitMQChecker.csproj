@@ -8,6 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>rabbitmq-1336519699982673966_16px.ico</ApplicationIcon>
 	<PublishSingleFile>true</PublishSingleFile>
+	<AssemblyVersion>1.0.1.0</AssemblyVersion>
+	<FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
@@ -23,6 +24,9 @@ namespace RabbitMQChecker
         public MainFrm()
         {
             InitializeComponent();
+            Assembly assembly = Assembly.GetCallingAssembly();
+            string? strVersion = assembly.GetName()?.Version?.ToString();
+            Text = "RabbitMQ Queue Checker - v" + strVersion;
         }
 
         public void StartConsumer()
