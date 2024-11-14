@@ -15,8 +15,8 @@ namespace RabbitMQChecker
 {
     public partial class MainFrm : Form
     {
-        IConnection _connection;
-        IModel _channel;
+        public IConnection? _connection;
+        public IModel? _channel;
         int PrevLine = 0;
         Boolean IsConsuming;
         Boolean IsAborting = false;
@@ -147,7 +147,10 @@ namespace RabbitMQChecker
 
         public void CloseConnection()
         {
+            if (_channel != null)
             _channel.Close();
+
+            if (_connection != null)
             _connection.Close();
         }
 

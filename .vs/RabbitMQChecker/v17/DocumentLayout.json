@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\sharedfiles\\github\\rabbitmq-queue-checker\\rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\sharedfiles\\github\\rabbitmq-queue-checker\\rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainFrm.cs",
+              "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\RabbitMQChecker\\MainFrm.cs",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.cs",
+              "ToolTip": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\RabbitMQChecker\\MainFrm.cs",
+              "RelativeToolTip": "RabbitMQChecker\\MainFrm.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAjwJ4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T03:48:23.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainFrm.cs [Design]",
+              "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\RabbitMQChecker\\MainFrm.cs",
+              "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.cs",
+              "ToolTip": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\RabbitMQChecker\\MainFrm.cs [Design]",
+              "RelativeToolTip": "RabbitMQChecker\\MainFrm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T03:48:09.887Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
