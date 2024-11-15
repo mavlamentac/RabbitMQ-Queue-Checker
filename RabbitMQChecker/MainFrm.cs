@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
@@ -20,7 +22,6 @@ namespace RabbitMQChecker
         public IModel? _channel;
         int PrevLine = 0;
         Boolean IsConsuming;
-        Boolean IsAborting = false;
         public MainFrm()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@ namespace RabbitMQChecker
                 };
                 _connection = factory.CreateConnection();
                 _channel = _connection.CreateModel();
-
+                _channel.BasicQos(prefetchSize: 0, prefetchCount: 5, global: false);
                 var consumer = new EventingBasicConsumer(_channel);
                 consumer.Received += (model, ea) =>
                 {
@@ -75,86 +76,10 @@ namespace RabbitMQChecker
             catch (Exception ex)
             {
                 LogMessages($"Error: {ex.Message}");
-                IsAborting = true;
             }
 
         }
 
-        private void StopBtn_Click(object sender, EventArgs e)
-        {
-            IsAborting = true;
-            //Close the connection and channel
-            CloseConnection();
-
-            StartBtn.Enabled = true;
-            StopBtn.Enabled = false;
-            ClearBtn.Enabled = true;
-        }
-
-        private void StartBtn_Click(object sender, EventArgs e)
-        {
-            LogsTxt.Clear();
-            if (FieldsValidation() != true)
-            {
-                StartConsumer();
-                if (IsAborting == true)
-                {
-                    CloseConnection();
-                }
-                else
-                {
-                    StartBtn.Enabled = false;
-                    StopBtn.Enabled = true;
-                    ClearBtn.Enabled = false;
-                    StopBtn.Focus();
-                    EmptyMessagesTimer.Enabled = true;
-                }
-            }
-        }
-
-        private void ConsumingMessageTimer_Tick(object sender, EventArgs e)
-        {
-            int CurrLine;
-            CurrLine = LogsTxt.Lines.Count();
-            if (CurrLine == PrevLine)
-            {
-                ConsumingMessageTimer.Enabled = false;
-                LogMessages(Environment.NewLine + "Message consumption has finished. Please check the processed data or logs for details.");
-                StartBtn.Enabled = true;
-                StopBtn.Enabled = false;
-                ClearBtn.Enabled = true;
-                if (IsAborting == false)
-                {
-                    CloseConnection();
-                }
-
-            }
-            else
-            {
-                PrevLine = CurrLine;
-            }
-        }
-
-        private void EmptyMessagesTimer_Tick(object sender, EventArgs e)
-        {
-            if (IsConsuming == false)
-            {
-                EmptyMessagesTimer.Enabled = false;
-                LogMessages("No available messages to process");
-                StartBtn.Enabled = true;
-                StopBtn.Enabled = false;
-                ClearBtn.Enabled = true;
-                if (IsAborting == false)
-                {
-                    CloseConnection();
-                }
-            }
-            else
-            {
-                EmptyMessagesTimer.Enabled = false;
-                ConsumingMessageTimer.Enabled = true;
-            }
-        }
         public void LogMessages(string msg)
         {
             LogsTxt.AppendText(msg);
@@ -215,6 +140,72 @@ namespace RabbitMQChecker
             return IsEmpty;
         }
 
+        //-------------- Events -------------------------------------------
+        private void StopBtn_Click(object sender, EventArgs e)
+        {
+       
+            //Close the connection and channel
+            CloseConnection();
+            //ConsumingMessageTimer.Enabled = true;
+            StartBtn.Enabled = true;
+            StopBtn.Enabled = false;
+            ClearBtn.Enabled = true;
+        }
+
+        private void StartBtn_Click(object sender, EventArgs e)
+        {
+            LogsTxt.Clear();
+            if (FieldsValidation() != true)
+            {
+                StartBtn.Enabled = false;
+                StopBtn.Enabled = true;
+                ClearBtn.Enabled = false;
+                StopBtn.Focus();
+                EmptyMessagesTimer.Enabled = true;
+     
+                StartConsumer();
+            }
+        }
+
+        private void ConsumingMessageTimer_Tick(object sender, EventArgs e)
+        {
+            int CurrLine;
+           
+            CurrLine = LogsTxt.Lines.Count();
+            if (CurrLine == PrevLine)
+            {
+                ConsumingMessageTimer.Enabled = false;
+                StartBtn.Enabled = true;
+                StopBtn.Enabled = false;
+                ClearBtn.Enabled = true;
+                LogMessages(Environment.NewLine + "Message consumption has finished. Please check the processed data or logs for details.");
+            }
+            else
+            {
+                PrevLine = CurrLine;
+            }
+            
+        }
+
+        private void EmptyMessagesTimer_Tick(object sender, EventArgs e)
+        {
+            if (IsConsuming == false)
+            {
+                EmptyMessagesTimer.Enabled = false;
+                LogMessages("No available messages to process");
+                StartBtn.Enabled = true;
+                StopBtn.Enabled = false;
+                ClearBtn.Enabled = true;
+                CloseConnection();
+            }
+            else
+            {
+                EmptyMessagesTimer.Enabled = false;
+                ConsumingMessageTimer.Enabled = true;
+            }
+        }
+        
+
         private void SelectionBtn_Click(object sender, EventArgs e)
         {
             EndPointSelectionFrm modalForm = new EndPointSelectionFrm();
@@ -225,6 +216,7 @@ namespace RabbitMQChecker
                 EndPointTxt.Text = modalForm.SelectedEndPoint;
                 PortTxt.Text = modalForm.SelectedPort;
                 VirtualHostTxt.Text = modalForm.SelectedVirtualHost;
+                UsernameTxt.Focus();
             }
         }
 
@@ -236,6 +228,8 @@ namespace RabbitMQChecker
             QueueTxt.Clear();
             VirtualHostTxt.Clear();
             LogsTxt.Clear();
+            UsernameTxt.Clear();
+            PasswordTxt.Clear();
         }
     }
 }

@@ -135,7 +135,7 @@
             // 
             // StartBtn
             // 
-            StartBtn.Location = new Point(328, 157);
+            StartBtn.Location = new Point(434, 157);
             StartBtn.Name = "StartBtn";
             StartBtn.Size = new Size(100, 32);
             StartBtn.TabIndex = 6;
@@ -161,7 +161,7 @@
             // 
             // EmptyMessagesTimer
             // 
-            EmptyMessagesTimer.Interval = 1000;
+            EmptyMessagesTimer.Interval = 3000;
             EmptyMessagesTimer.Tick += EmptyMessagesTimer_Tick;
             // 
             // LogsTxt
@@ -177,13 +177,14 @@
             // StopBtn
             // 
             StopBtn.Enabled = false;
-            StopBtn.Location = new Point(434, 157);
+            StopBtn.Location = new Point(411, 215);
             StopBtn.Name = "StopBtn";
             StopBtn.Size = new Size(100, 32);
             StopBtn.TabIndex = 15;
             StopBtn.TabStop = false;
             StopBtn.Text = "Stop Consume";
             StopBtn.UseVisualStyleBackColor = true;
+            StopBtn.Visible = false;
             StopBtn.Click += StopBtn_Click;
             // 
             // timer2
@@ -208,7 +209,7 @@
             // 
             // ClearBtn
             // 
-            ClearBtn.Location = new Point(12, 157);
+            ClearBtn.Location = new Point(328, 157);
             ClearBtn.Name = "ClearBtn";
             ClearBtn.Size = new Size(100, 32);
             ClearBtn.TabIndex = 17;
