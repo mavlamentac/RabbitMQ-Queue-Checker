@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\sharedfiles\\github\\rabbitmq-queue-checker\\trunk\\rabbitmqchecker\\rabbitmqchecker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\rabbitmqchecker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\sharedfiles\\github\\rabbitmq-queue-checker\\trunk\\rabbitmqchecker\\mainfrm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\mainfrm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\rabbitmqchecker\\endpointselectionfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\endpointselectionfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|c:\\sharedfiles\\github\\rabbitmq-queue-checker\\trunk\\rabbitmqchecker\\rabbitmqchecker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{17694A45-3C6A-4D76-AE04-A0E661F61DBD}|RabbitMQChecker\\RabbitMQChecker.csproj|solutionrelative:rabbitmqchecker\\rabbitmqchecker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainFrm.Designer.cs",
               "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\MainFrm.Designer.cs",
               "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.Designer.cs",
@@ -51,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "RabbitMQChecker",
               "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\RabbitMQChecker.csproj",
               "RelativeDocumentMoniker": "RabbitMQChecker\\RabbitMQChecker.csproj",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EndPointSelectionFrm.cs",
               "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\EndPointSelectionFrm.cs",
               "RelativeDocumentMoniker": "RabbitMQChecker\\EndPointSelectionFrm.cs",
@@ -76,19 +76,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EndPointSelectionFrm.cs [Design]",
               "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\EndPointSelectionFrm.cs",
               "RelativeDocumentMoniker": "RabbitMQChecker\\EndPointSelectionFrm.cs",
               "ToolTip": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\EndPointSelectionFrm.cs [Design]",
               "RelativeToolTip": "RabbitMQChecker\\EndPointSelectionFrm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T04:26:04.942Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-14T04:26:04.942Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainFrm.cs",
               "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\MainFrm.cs",
               "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.cs",
@@ -101,15 +100,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainFrm.cs [Design]",
               "DocumentMoniker": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\MainFrm.cs",
               "RelativeDocumentMoniker": "RabbitMQChecker\\MainFrm.cs",
               "ToolTip": "C:\\SharedFiles\\Github\\RabbitMQ-Queue-Checker\\Trunk\\RabbitMQChecker\\MainFrm.cs [Design]",
               "RelativeToolTip": "RabbitMQChecker\\MainFrm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T03:48:09.887Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-14T03:48:09.887Z"
             }
           ]
         }
