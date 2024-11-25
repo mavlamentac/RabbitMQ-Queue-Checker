@@ -33,6 +33,7 @@ namespace RabbitMQChecker
         public void StartConsumer()
         {
             IsConsuming = false;
+            EmptyMessagesTimer.Enabled = true;
             try
             {
                 var uri = new Uri(EndPointTxt.Text);
@@ -72,10 +73,13 @@ namespace RabbitMQChecker
                                      consumer);
 
                 LogMessages("Consumer started. Waiting for messages..." + Environment.NewLine);
+                
             }
             catch (Exception ex)
             {
                 LogMessages($"Error: {ex.Message}");
+                EmptyMessagesTimer.Enabled = false;
+                InitializeStartButtons(true);
             }
 
         }
@@ -140,29 +144,28 @@ namespace RabbitMQChecker
             return IsEmpty;
         }
 
-        //-------------- Events -------------------------------------------
-        private void StopBtn_Click(object sender, EventArgs e)
+        private void InitializeStartButtons(bool value)
         {
-       
-            //Close the connection and channel
-            CloseConnection();
-            //ConsumingMessageTimer.Enabled = true;
-            StartBtn.Enabled = true;
-            StopBtn.Enabled = false;
-            ClearBtn.Enabled = true;
+            if (value)
+            {
+                StartBtn.Enabled = true;
+                ClearBtn.Enabled = false;
+            }
+            else
+            {
+                StartBtn.Enabled = false;
+                ClearBtn.Enabled = true;
+            }
         }
+
+        //----------------------------------- Events -------------------------------------------
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
             LogsTxt.Clear();
             if (FieldsValidation() != true)
             {
-                StartBtn.Enabled = false;
-                StopBtn.Enabled = true;
-                ClearBtn.Enabled = false;
-                StopBtn.Focus();
-                EmptyMessagesTimer.Enabled = true;
-     
+                InitializeStartButtons(false);
                 StartConsumer();
             }
         }
@@ -175,9 +178,7 @@ namespace RabbitMQChecker
             if (CurrLine == PrevLine)
             {
                 ConsumingMessageTimer.Enabled = false;
-                StartBtn.Enabled = true;
-                StopBtn.Enabled = false;
-                ClearBtn.Enabled = true;
+                InitializeStartButtons(true);
                 LogMessages(Environment.NewLine + "Message consumption has finished. Please check the processed data or logs for details.");
             }
             else
@@ -192,10 +193,8 @@ namespace RabbitMQChecker
             if (IsConsuming == false)
             {
                 EmptyMessagesTimer.Enabled = false;
-                LogMessages("No available messages to process");
-                StartBtn.Enabled = true;
-                StopBtn.Enabled = false;
-                ClearBtn.Enabled = true;
+                LogMessages(Environment.NewLine + "No available messages to process");
+                InitializeStartButtons(true);
                 CloseConnection();
             }
             else

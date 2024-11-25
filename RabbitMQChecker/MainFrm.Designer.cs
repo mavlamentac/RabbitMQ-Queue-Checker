@@ -45,7 +45,6 @@
             PortTxt = new TextBox();
             EmptyMessagesTimer = new System.Windows.Forms.Timer(components);
             LogsTxt = new TextBox();
-            StopBtn = new Button();
             timer2 = new System.Windows.Forms.Timer(components);
             ConsumingMessageTimer = new System.Windows.Forms.Timer(components);
             SelectionBtn = new Button();
@@ -174,19 +173,6 @@
             LogsTxt.TabIndex = 11;
             LogsTxt.TabStop = false;
             // 
-            // StopBtn
-            // 
-            StopBtn.Enabled = false;
-            StopBtn.Location = new Point(411, 215);
-            StopBtn.Name = "StopBtn";
-            StopBtn.Size = new Size(100, 32);
-            StopBtn.TabIndex = 15;
-            StopBtn.TabStop = false;
-            StopBtn.Text = "Stop Consume";
-            StopBtn.UseVisualStyleBackColor = true;
-            StopBtn.Visible = false;
-            StopBtn.Click += StopBtn_Click;
-            // 
             // timer2
             // 
             timer2.Interval = 3000;
@@ -224,7 +210,6 @@
             ClientSize = new Size(546, 450);
             Controls.Add(ClearBtn);
             Controls.Add(SelectionBtn);
-            Controls.Add(StopBtn);
             Controls.Add(label6);
             Controls.Add(PortTxt);
             Controls.Add(LogsTxt);
@@ -266,7 +251,6 @@
         private TextBox PortTxt;
         private System.Windows.Forms.Timer EmptyMessagesTimer;
         private TextBox LogsTxt;
-        private Button StopBtn;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer ConsumingMessageTimer;
         private Button SelectionBtn;
